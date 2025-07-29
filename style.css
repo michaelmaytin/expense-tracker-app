@@ -1,168 +1,116 @@
 * {
     box-sizing: border-box;
+    padding: 0;
     margin: 0;
-    padding: 0;;
 }
 
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 4rem;
-    display: flex;
-    justify-content: center;
-    background: url(money.jpg)
+  background: url(money.png);
+  background-size: 50px auto;
+  background-attachment: fixed;
+  background-color: rgb(196, 255, 196);
+  padding: 4rem;
 }
 
 .main-container {
     background: white;
-    padding: 4rem;
     border-radius: 25px;
-    box-shadow: 0 20px 40px rgba(0,0,0,1);
-    width: 100%;
-    max-width: 900px;
-}
-
-#heading {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.transaction-and-summary-container {
-    background: rgb(240, 240, 240);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 1rem;
-    border-radius: 25px;
-    gap: 4rem;
-}
-
-.balance-container {
-    background: rgb(240, 240, 240);
-    text-align: center;
-    padding: 0;
-}
-
-.balance-container h2 {
-    font-size: 60px;
-    font-weight: bolder;
-}
-
-.summary-container {
-    background: rgb(240, 240, 240);
-    padding: 0;
-}
-
-.summary-container h3 {
-    font-size: 30px;
-}
-
-.summary-container p {
-    font-size: 20px;
-}
-
-#money-plus {
-    color: green;
-}
-
-#money-minus {
-    color: red;
-}
-
-.new-transaction-container {
-    background: rgb(255, 255, 255);
+    padding: 2rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid black;
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
 }
 
-.new-transaction-container h2 {
-    font-size: 30px;
-    position: relative;
-    left: 5px
+.main-container h1 {
+    border: 1px solid black;
+    padding: 1rem;
+    width: auto;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+.balance {
+    background: rgb(255, 224, 229);
+    display: flex;
+    padding: 1rem;
+    width: 100% auto;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+.current-balance {
+    background: rgb(255, 224, 229);
+    margin-right: 0px;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.spendature {
+    background: rgb(255, 224, 229);
+    padding: 1rem;
+}
+
+.transaction-container {
+    margin: 0 auto;
+    margin-top: 25px;
+    background: white;
+    padding: 2rem;
+    border-radius: 25px;
+    border: 1px solid black;
+    width: 100%;
+    max-width: 750px;
+}
+
+.new-transaction h2 {
+    border: 1px solid black;
+    max-width: 200px;
+    text-align: center;
 }
 
 #form {
     display: flex;
     flex-direction: column;
-    margin-top: 5px;
 }
 
-#description {
-    max-width: 300px;
-    padding: 15px;
-    margin-bottom: 5px;
-    border-radius: 15px;
-    border: 4px solid rgba(0,0,0,.2);
+#description, #amount {
+    margin-top: 10px;
+    max-width: 200px;
+    padding: 5px;
 }
 
-#description:hover {
-    border: 4px solid black;
-    transform: scale(1.025);
-    transition: .3s ease;
+#add {
+    margin-top: 10px;
+    max-width: 75px;
+    padding: 5px;
+    background: rgb(78, 78, 255);
+    color: white;
 }
 
-#amount {
-    max-width: 300px;
-    padding: 15px;
-    margin-bottom: 5px;
-    border-radius: 15px;
-    border: 4px solid rgba(0,0,0,.2);
+.list-container {
+    margin: 0 auto;
+    margin-top: 25px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 750px;;
 }
 
-#amount:hover {
-    border: 4px solid black;
-    transform: scale(1.025);
-    transition: .3s ease;
+.list-container h2 {
+    border: 1px solid black;
+    text-align: center;
+    max-width: 200px;
 }
 
-#submit-button {
-    max-width: 100px;
-    padding: 15px;
-    margin-bottom: 5px;
-    border-radius: 15px;
-    background: rgb(237, 255, 237);
-    border: 4px solid rgba(0,0,0,.2);
+.list-container ul {
+    margin-top: 10px;
 }
-
-#submit-button:hover {
-    background: rgb(128, 255, 181);
-    border: 4px solid black;
-    transform: scale(1.025);
-    transition: .3s ease;
-}
-
-.transaction-list-container {
-    background: rgb(240, 240, 240);
-    border-radius: 15px;
-}
-
-.transaction-list-container h2 {
-    font-size: 30px;
-    position: relative;
-    left: 5px
-}
-
-#transaction-list {
-    list-style: none;
-    margin: 1rem 0;
-}
-
-#transaction-list li {
-    background: #eee;
-    padding: 10px;
-    border-right: 5px solid;
-    border-top: 1px solid;
-    border-left: 1px solid;
-    border-bottom: 1px solid;
-    display: flex;
-    justify-content: space-between;
-}
-
-#transaction-list li.plus {
-    border-color: green;
-}
-
-#transaction-list li.minus {
-    border-color: red;
-}
-
