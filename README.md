@@ -1,11 +1,10 @@
-# Expense Tracker Web Application
+# Simple Expense Tracker
 
-### This is a simple expense tracking web application mean to demonstrate the following languages:
-
+### This is a simple expense tracker application to demonstrate the following:
 - HTML
 - CSS
 - JavaScript
 
-![Screenshot](screenshot-1.png) 
-![Screenshot](screenshot-2.png)
+![Screenshot](screenshot-1.png)
 
+![Sreenshot](screenshot-2.png)

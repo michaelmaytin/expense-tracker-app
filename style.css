@@ -1,76 +1,168 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0;;
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: rgb(219, 251, 204);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 4rem;
     display: flex;
     justify-content: center;
-    padding: 40px;
+    background: url(money.jpg)
 }
 
-.container {
-    width: 400px;
+.main-container {
     background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    padding: 4rem;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,1);
+    width: 100%;
+    max-width: 900px;
 }
 
-h2, h3 {
+#heading {
     text-align: center;
-    margin: 1rem 0;
+    margin-bottom: 20px;
 }
 
-.balance {
-    text-align: center;
-    margin: 1rem 0;
-}
-
-.summary {
+.transaction-and-summary-container {
+    background: rgb(240, 240, 240);
     display: flex;
-    justify-content: center;
-    margin: 1rem 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     padding: 1rem;
-    background: #f0f0f0;
-    border-radius: 5px;
+    border-radius: 25px;
+    gap: 4rem;
 }
 
-.money.plus {
+.balance-container {
+    background: rgb(240, 240, 240);
+    text-align: center;
+    padding: 0;
+}
+
+.balance-container h2 {
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+.summary-container {
+    background: rgb(240, 240, 240);
+    padding: 0;
+}
+
+.summary-container h3 {
+    font-size: 30px;
+}
+
+.summary-container p {
+    font-size: 20px;
+}
+
+#money-plus {
     color: green;
 }
 
-.money.minus {
+#money-minus {
     color: red;
 }
 
-.list {
+.new-transaction-container {
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+}
+
+.new-transaction-container h2 {
+    font-size: 30px;
+    position: relative;
+    left: 5px
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+#description {
+    max-width: 300px;
+    padding: 15px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    border: 4px solid rgba(0,0,0,.2);
+}
+
+#description:hover {
+    border: 4px solid black;
+    transform: scale(1.025);
+    transition: .3s ease;
+}
+
+#amount {
+    max-width: 300px;
+    padding: 15px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    border: 4px solid rgba(0,0,0,.2);
+}
+
+#amount:hover {
+    border: 4px solid black;
+    transform: scale(1.025);
+    transition: .3s ease;
+}
+
+#submit-button {
+    max-width: 100px;
+    padding: 15px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    background: rgb(237, 255, 237);
+    border: 4px solid rgba(0,0,0,.2);
+}
+
+#submit-button:hover {
+    background: rgb(128, 255, 181);
+    border: 4px solid black;
+    transform: scale(1.025);
+    transition: .3s ease;
+}
+
+.transaction-list-container {
+    background: rgb(240, 240, 240);
+    border-radius: 15px;
+}
+
+.transaction-list-container h2 {
+    font-size: 30px;
+    position: relative;
+    left: 5px
+}
+
+#transaction-list {
     list-style: none;
     margin: 1rem 0;
 }
 
-.list li {
+#transaction-list li {
     background: #eee;
     padding: 10px;
-    margin: 5px 0;
     border-right: 5px solid;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
     display: flex;
     justify-content: space-between;
 }
 
-.list li.plus {
+#transaction-list li.plus {
     border-color: green;
 }
 
-.list li.minus {
+#transaction-list li.minus {
     border-color: red;
 }
 
-form input, form button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-}
