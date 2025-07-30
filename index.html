@@ -1,68 +1,51 @@
-<!-- 
-    - better understand the code
-    - Better organzie the structure
-    - add a clock/day
-    - add dynamic backgorund
-    - add date of transaction
--->
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="style.css"/>
         <link rel="icon" href="dollarsign.png"/>
         <title>Expense Tracker</title>
     </head>
     <body>
-        <div class="main-container">
-            <!-- Header-->
-            <div class="header">
-                <h1>Expense Tracker</h1>
-            </div>
+        <!-- title container -->
+        <div class="title-container">
+            <h1>Expense Tracker</h1>
+        </div>
 
-            <!-- Balance and +/- Spendature-->
+        <!-- balance - income - expense container -->
+        <div class="balance-container">
+            <!-- overall balance -->
             <div class="balance">
-                <div class="current-balance">
-                    <h2>Balance</h2>
-                    <h2 id="balance-amount">$0.00</h2>
-                </div>
+                <h1>Current Balance</h1>
+                <h1 id="balance-amount">$0.00</h1>
+            </div>
 
-                <!-- (+/-) -->
-                <div class="spendature">
-                    <div class="income">
-                        <h4>Income</h4>
-                        <p id="income">+$0.00</p>
-                    </div>
-                    <div class="expenses">
-                        <h4>Expenses</h4>
-                        <p id="expense">-$0.00</p>
-                    </div>
+            <!-- (+/-) income and expense -->
+            <div class="income-expense-container">
+                <div id="income">
+                    <h2 id="income-amount">$0.00</h2>
+                </div>
+                <div id="expense">
+                    <h2 id="expense-amount">$0.00</h2>
                 </div>
             </div>
         </div>
 
-        <div class="transaction-container">
-            <!-- Add Transaction -->
-             <div class="new-transaction">
-                <h2>New Transaction</h2>
-             </div>
-
-             <div>
-                <form id="form">
-                    <input id="description" type="text" placeholder="Enter descripton" required />
-                    <input id="amount" type="number" step="0.01" placeholder="Enter amount" required />
-                    <button id="add" type="submit">submit</button>
-                </form>
-             </div>
+        <!-- add transaction container-->
+        <div class="add-transaction-container">
+            <h1>Add New Transaction:</h1>
+            <form id="form">
+                <input id="description" type="text" placeholder="Enter description..." required/>
+                <input id="amount" type="number" step="0.01" placeholder="Enter the amount..." required/>
+                <button id="add-button" type="submit">Add</button>
+            </form>
         </div>
 
-        <div class="list-container">
-            <h2>Past Transactions</h2>
-            <ul id="past-transactions">***</ul>
+        <!-- transaction list contianer-->
+        <div class="transaction-list-container">
+            <h1>Transaction History:</h1>
+            <ul id="transaction-list">***</ul>
         </div>
-
-        <script src="script.js"></script>
     </body>
 </html>
